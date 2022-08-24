@@ -16,8 +16,8 @@ setup(
     version=version,
     author="Neil Fraser",
     author_email="fraser@google.com",
-    maintainer="John Reese",
-    maintainer_email="john@noswap.com",
+    maintainer="Amethyst Reese",
+    maintainer_email="amy@noswap.com",
     url="https://github.com/diff-match-patch-python/diff-match-patch",
     classifiers=[
         "Development Status :: 6 - Mature",
