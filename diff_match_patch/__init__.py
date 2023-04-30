@@ -1,9 +1,10 @@
-import sys
+"""
+Repackaging of Google's Diff Match and Patch libraries.
 
-if sys.version_info >= (3, 0):
-    from .diff_match_patch import __author__, __doc__, diff_match_patch, patch_obj
-else:
-    from .diff_match_patch_py2 import __author__, __doc__, diff_match_patch, patch_obj
+Offers robust algorithms to perform the operations required for synchronizing plain text.
+"""
+
+from .diff_match_patch import __author__, __doc__, diff_match_patch, patch_obj
 
 __version__ = "20200713"
 __packager__ = "Amethyst Reese (amy@noswap.com)"
