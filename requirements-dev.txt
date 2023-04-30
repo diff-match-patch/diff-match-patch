@@ -1,5 +1,0 @@
-black==19.10b0; python_version >= "3.6"
-isort>=5.0; python_version >= "3.6"
-mypy==0.770; python_version >= "3.5"
-twine==1.15.0
-wheel>=0.34
