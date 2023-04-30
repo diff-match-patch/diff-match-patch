@@ -8,7 +8,7 @@ Google's [Diff Match and Patch][DMP] library, packaged for modern Python.
 
 ## Install
 
-diff-match-patch is supported on Python 2.7 or Python 3.4 or newer.
+diff-match-patch is supported on Python 3.5 or newer.
 You can install it from PyPI:
 
 ```shell
