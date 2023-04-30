@@ -17,7 +17,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-import imp
+import importlib
 import os
 import sys
 import time
@@ -30,7 +30,7 @@ import diff_match_patch as dmp_module
 
 # Force a module reload.  Allows one to edit the DMP module and rerun the tests
 # without leaving the Python interpreter.
-imp.reload(dmp_module)
+importlib.reload(dmp_module)
 
 
 class DiffMatchPatchTest(unittest.TestCase):
