@@ -16,10 +16,10 @@ format:
 
 lint:
 	python -m ufmt check diff_match_patch
+	python -m mypy -p diff_match_patch
 
 test:
 	python -m unittest -v diff_match_patch.tests
-	python -m mypy -p diff_match_patch
 
 clean:
 	rm -rf build dist html README MANIFEST *.egg-info

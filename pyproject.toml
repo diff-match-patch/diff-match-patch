@@ -46,3 +46,6 @@ name = "diff-match-patch"
 package = "diff_match_patch"
 signed_tags = true
 version_file = true
+
+[tool.mypy]
+python_version = "3.6"
