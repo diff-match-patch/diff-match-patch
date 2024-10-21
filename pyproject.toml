@@ -31,7 +31,7 @@ dev = [
     "flit==3.9.0",
     "mypy==1.2.0",
     "ufmt==2.1.0",
-    "usort==1.0.6",
+    "usort==1.0.8.post1",
 ]
 
 [project.urls]
