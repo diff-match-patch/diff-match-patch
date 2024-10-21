@@ -27,7 +27,7 @@ dependencies = []
 dev = [
     "attribution==1.6.2",
     "build>=1",
-    "black==24.8.0",
+    "black==24.10.0",
     "flit==3.9.0",
     "mypy==1.2.0",
     "ufmt==2.1.0",
