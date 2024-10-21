@@ -26,6 +26,7 @@ dependencies = []
 [project.optional-dependencies]
 dev = [
     "attribution==1.6.2",
+    "build>=1",
     "black==23.3.0",
     "flit==3.8.0",
     "mypy==1.2.0",

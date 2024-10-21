@@ -1,25 +1,43 @@
+SRCS:=diff_match_patch
+EXTRAS:=dev
+
+ifeq ($(OS),Windows_NT)
+    ACTIVATE:=.venv/Scripts/activate
+else
+    ACTIVATE:=.venv/bin/activate
+endif
+
+UV:=$(shell uv --version)
+ifdef UV
+	VENV:=uv venv
+	PIP:=uv pip
+else
+	VENV:=python -m venv
+	PIP:=python -m pip
+endif
+
 .venv:
-	python -m venv .venv
-	source .venv/bin/activate && make install
-	echo 'run `source .venv/bin/activate` to develop diff-match-patch'
+	$(VENV) .venv
 
 venv: .venv
+	source $(ACTIVATE) && make install
+	echo 'run `source $(ACTIVATE)` to use virtualenv'
 
 install:
-	python -m pip install -e .[dev]
+	$(PIP) install -Ue .[$(EXTRAS)]
 
 release: lint test clean
 	python -m flit publish
 
 format:
-	python -m ufmt format diff_match_patch
+	python -m ufmt format $(SRCS)
 
 lint:
-	python -m ufmt check diff_match_patch
-	python -m mypy -p diff_match_patch
+	python -m ufmt check $(SRCS)
+	python -m mypy -p $(SRCS)
 
 test:
-	python -m unittest -v diff_match_patch.tests
+	python -m unittest -v $(SRCS).tests
 
 clean:
 	rm -rf build dist html README MANIFEST *.egg-info
