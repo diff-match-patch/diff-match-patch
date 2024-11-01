@@ -28,7 +28,7 @@ dev = [
     "attribution==1.8.0",
     "build>=1",
     "black==24.8.0",
-    "flit==3.9.0",
+    "flit==3.10.0",
     "mypy==1.12.1",
     "ufmt==2.7.3",
     "usort==1.0.8.post1",
